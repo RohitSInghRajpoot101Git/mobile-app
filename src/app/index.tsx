@@ -8,15 +8,21 @@ export default function Index() {
 
   if (!isInitialised) {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <ActivityIndicator size={'large'} />
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <ActivityIndicator size="large" />
       </View>
     );
   }
 
   return isAuthenticated ? (
-    <Redirect href="/" />
+    <Redirect href="/(app)/dashboard" />
   ) : (
-    <Redirect href="/(auth)/login" />
+    <Redirect href="/landing-page" />
   );
 }
