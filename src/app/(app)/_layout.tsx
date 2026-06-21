@@ -16,6 +16,7 @@ export default function AppLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
+        // tabBarPosition: "top", ** To shift the tabs towards top of the screen. **
         tabBarActiveTintColor: colors.accentPrimary,
         tabBarInactiveTintColor: colors.textMuted,
         tabBarStyle: {
