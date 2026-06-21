@@ -9,13 +9,14 @@ export default function AppLayout() {
   const router = useRouter();
 
   useEffect(() => {
-    if (isAuthenticated) router.replace('/(auth)/login');
+    if (!isAuthenticated) router.replace('/(auth)/login');
   }, [isAuthenticated]);
 
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
+        // tabBarPosition: "top", ** To shift the tabs towards top of the screen. **
         tabBarActiveTintColor: colors.accentPrimary,
         tabBarInactiveTintColor: colors.textMuted,
         tabBarStyle: {
