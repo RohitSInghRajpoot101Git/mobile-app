@@ -1,4 +1,4 @@
-import { FlatList, View, Text } from "react-native";
+import { FlatList, View, Text } from 'react-native';
 
 interface Member {
   id: string;
@@ -19,13 +19,9 @@ export function MemberList({ members }: MemberListProps) {
       renderItem={({ item }) => (
         <View className="flex-row items-center justify-between border-b border-gray-200 py-3">
           <View>
-            <Text className="text-base font-medium">
-              {item.name}
-            </Text>
+            <Text className="text-base font-medium">{item.name}</Text>
 
-            <Text className="text-sm text-gray-500">
-              {item.userCode}
-            </Text>
+            <Text className="text-sm text-gray-500">{item.userCode}</Text>
           </View>
         </View>
       )}
